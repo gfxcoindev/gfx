@@ -56,19 +56,19 @@ public:
         nRPCPort = 4093;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
 
-        const char* pszTimestamp = "Audaces Fortuna Juvat - 2018-04-22";
+        const char* pszTimestamp = "Audaces Fortuna Juvat - 2018-04-23";
         std::vector<CTxIn> vin;
         vin.resize(1);
         vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         std::vector<CTxOut> vout;
         vout.resize(1);
         vout[0].SetEmpty();
-        CTransaction txNew(1, 1524463044, vin, vout, 0);
+        CTransaction txNew(1, 1524516965, vin, vout, 0);
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1524463044;
+        genesis.nTime    = 1524516965;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
         genesis.nNonce   = 53683;
 
@@ -81,6 +81,23 @@ public:
        */
 
         hashGenesisBlock = genesis.GetHash();
+		
+		
+		//Generate new hashes. remove
+		
+		if (hashGenesisBlock != uint256("0x000149d0c0dec3468068735e9f9ccdd6d329ed2f6f60add7459773e502f067c5")) 
+		{
+
+			printf("MAIN genesis time = %u \n", genesis.nTime);
+			printf("MAIN genesis nonce = %u \n", genesis.nNonce);
+			printf("MAIN genesis hash = %s\n", genesis.GetHash().ToString().c_str());
+			printf("MAIN merkleroot hash = %s\n", genesis.BuildMerkleTree().ToString().c_str());
+		}
+		
+		
+		
+		
+		
         assert(hashGenesisBlock == uint256("0x"));
         assert(genesis.hashMerkleRoot == uint256("0x"));
 
@@ -142,6 +159,22 @@ public:
        */
         
         hashGenesisBlock = genesis.GetHash();
+		
+		//Generate new hashes. remove
+		
+		if (hashGenesisBlock != uint256("0x000149d0c0dec3468068735e9f9ccdd6d329ed2f6f60add7459773e502f067c5")) 
+		{
+
+			printf("TEST genesis time = %u \n", genesis.nTime);
+			printf("TEST genesis nonce = %u \n", genesis.nNonce);
+			printf("TEST genesis hash = %s\n", genesis.GetHash().ToString().c_str());
+			printf("TEST merkleroot hash = %s\n", genesis.BuildMerkleTree().ToString().c_str());
+		}
+		
+		
+		
+		
+		
         assert(hashGenesisBlock == uint256("0x"));
 
         vFixedSeeds.clear();
