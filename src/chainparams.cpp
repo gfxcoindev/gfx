@@ -85,7 +85,7 @@ public:
 		
 		//Generate new hashes. remove
 		
-		if (hashGenesisBlock != uint256("0x000149d0c0dec3468068735e9f9ccdd6d329ed2f6f60add7459773e502f067c5")) 
+		if (hashGenesisBlock != uint256("0xefc62a616e63a58a331875e8ec181288bff23ec179e47a385c1f86cb5cf61fbf")) 
 		{
 
 			printf("MAIN genesis time = %u \n", genesis.nTime);
@@ -98,8 +98,8 @@ public:
 		
 		
 		
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0xefc62a616e63a58a331875e8ec181288bff23ec179e47a385c1f86cb5cf61fbf"));
+        assert(genesis.hashMerkleRoot == uint256("0xdd868b1a2ee686cd1bb4391697827416dc00f8bed2e0c9f1ce6ddcea6bac5572"));
 
         //vSeeds.push_back(CDNSSeedData("seed1", "64.150.189.104"));
 
@@ -162,7 +162,7 @@ public:
 		
 		//Generate new hashes. remove
 		
-		if (hashGenesisBlock != uint256("0x000149d0c0dec3468068735e9f9ccdd6d329ed2f6f60add7459773e502f067c5")) 
+		if (hashGenesisBlock != uint256("0xaff44d1af53327e7101a5665818b794cc90e88d86dd5d6b8c6725e39374d1934")) 
 		{
 
 			printf("TEST genesis time = %u \n", genesis.nTime);
@@ -175,7 +175,7 @@ public:
 		
 		
 		
-        assert(hashGenesisBlock == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0xaff44d1af53327e7101a5665818b794cc90e88d86dd5d6b8c6725e39374d1934"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
