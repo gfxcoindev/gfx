@@ -1,4 +1,4 @@
-Name Era
+Name GraphicsCoin
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -6,11 +6,11 @@ SetCompressor /SOLID lzma
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 0.3.0
-!define COMPANY "Era project"
-!define URL http://www.era.ru/
+!define COMPANY "GraphicsCoin project"
+!define URL http://www.graphicscoin.ru/
 
 # MUI Symbol Definitions
-!define MUI_ICON "../share/pixmaps/era.ico"
+!define MUI_ICON "../share/pixmaps/graphicscoin.ico"
 !define MUI_WELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
@@ -19,8 +19,8 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER Era
-#!define MUI_FINISHPAGE_RUN $INSTDIR\era-qt.exe
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER GraphicsCoin
+#!define MUI_FINISHPAGE_RUN $INSTDIR\graphicscoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -45,14 +45,14 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile era-0.3.0-win32-setup.exe
-InstallDir $PROGRAMFILES\Era
+OutFile graphicscoin-0.3.0-win32-setup.exe
+InstallDir $PROGRAMFILES\GraphicsCoin
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
 VIProductVersion 0.3.0.0
-VIAddVersionKey ProductName Era
+VIAddVersionKey ProductName GraphicsCoin
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
@@ -66,18 +66,18 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    #File ../release/era-qt.exe
+    #File ../release/graphicscoin-qt.exe
     File /oname=license.txt ../COPYING
     File /oname=readme.txt ../doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File ../src/erad.exe
+    File ../src/graphicscoind.exe
     SetOutPath $INSTDIR\src
     File /r /x *.exe /x *.o ../src\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
-    # Remove old wxwidgets-based-era executable and locales:
-    #Delete /REBOOTOK $INSTDIR\era.exe
+    # Remove old wxwidgets-based-graphicscoin executable and locales:
+    #Delete /REBOOTOK $INSTDIR\graphicscoin.exe
     #RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -87,7 +87,7 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Era.lnk" $INSTDIR\uninstall.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall GraphicsCoin.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
@@ -98,11 +98,11 @@ Section -post SEC0001
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
 
-    # era: URI handling disabled for 0.6.0
-    #    WriteRegStr HKCR "era" "URL Protocol" ""
-    #    WriteRegStr HKCR "era" "" "URL:Era"
-    #    WriteRegStr HKCR "era\DefaultIcon" "" $INSTDIR\era-qt.exe
-    #    WriteRegStr HKCR "era\shell\open\command" "" '"$INSTDIR\era-qt.exe" "$$1"'
+    # graphicscoin: URI handling disabled for 0.6.0
+    #    WriteRegStr HKCR "graphicscoin" "URL Protocol" ""
+    #    WriteRegStr HKCR "graphicscoin" "" "URL:GraphicsCoin"
+    #    WriteRegStr HKCR "graphicscoin\DefaultIcon" "" $INSTDIR\graphicscoin-qt.exe
+    #    WriteRegStr HKCR "graphicscoin\shell\open\command" "" '"$INSTDIR\graphicscoin-qt.exe" "$$1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -120,7 +120,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    #Delete /REBOOTOK $INSTDIR\era-qt.exe
+    #Delete /REBOOTOK $INSTDIR\graphicscoin-qt.exe
     Delete /REBOOTOK $INSTDIR\license.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -130,9 +130,9 @@ SectionEnd
 
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Era.lnk"
-    #Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Era.lnk"
-    #Delete /REBOOTOK "$SMSTARTUP\Era.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall GraphicsCoin.lnk"
+    #Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\GraphicsCoin.lnk"
+    #Delete /REBOOTOK "$SMSTARTUP\GraphicsCoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log
@@ -140,7 +140,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "era"
+    DeleteRegKey HKCR "graphicscoin"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0

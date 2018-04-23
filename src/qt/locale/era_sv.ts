@@ -2589,8 +2589,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Skicka kommando till -server eller erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Skicka kommando till -server eller graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2614,8 +2614,8 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
-        <translation>Ange pid filen (standard erad.pid)</translation>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
+        <translation>Ange pid filen (standard graphicscoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>

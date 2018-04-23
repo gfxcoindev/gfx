@@ -2578,7 +2578,7 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
+        <source>Send command to -server or graphicscoind</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2606,7 +2606,7 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>

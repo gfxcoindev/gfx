@@ -1,4 +1,4 @@
-era               ICON    "pixmaps/era.ico"
+graphicscoin               ICON    "pixmaps/graphicscoin.ico"
 
 #include "wx/msw/wx.rc"
 

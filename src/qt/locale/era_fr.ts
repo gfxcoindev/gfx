@@ -2589,8 +2589,8 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Envoyer commande à -server ou erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Envoyer commande à -server ou graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2614,8 +2614,8 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
-        <translation>Spécifier le fichier pid (par défaut: erad.pid)</translation>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
+        <translation>Spécifier le fichier pid (par défaut: graphicscoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>

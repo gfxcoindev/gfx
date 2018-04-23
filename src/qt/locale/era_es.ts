@@ -2589,8 +2589,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Envía un comando a -server o erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Envía un comando a -server o graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2617,8 +2617,8 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
-        <translation>Especifica un archivo pid (por defecto: erad.pid)</translation>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
+        <translation>Especifica un archivo pid (por defecto: graphicscoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>

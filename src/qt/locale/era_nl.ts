@@ -2589,8 +2589,8 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Verstuur commando naar -server of erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Verstuur commando naar -server of graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2614,7 +2614,7 @@ Dit betekend dat een fee van %2 is vereist.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
         <translation>Selecteer pid bestand (standaard: graphicscoin.conf)</translation>
     </message>
     <message>

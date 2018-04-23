@@ -2589,8 +2589,8 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Trimite comanda catre server sau erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Trimite comanda catre server sau graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2614,7 +2614,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
         <translation>Speficica fisier pid(implicit: graphicscoin.pid)</translation>
     </message>
     <message>

@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = era-qt
+TARGET = graphicscoin-qt
 VERSION = 1.0.0.0
 INCLUDEPATH += src src/json src/qt
 QT += core gui widgets network
@@ -304,7 +304,7 @@ HEADERS += src/qt/eragui.h \
     src/hmq1725/sph_haval.h \
     src/hmq1725/sph_sha2.h
 
-SOURCES += src/qt/era.cpp src/qt/eragui.cpp \
+SOURCES += src/qt/graphicscoin.cpp src/qt/eragui.cpp \
     src/qt/transactiontablemodel.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/optionsdialog.cpp \
@@ -382,7 +382,7 @@ SOURCES += src/qt/era.cpp src/qt/eragui.cpp \
     src/pbkdf2.cpp
 
 RESOURCES += \
-    src/qt/era.qrc
+    src/qt/graphicscoin.qrc
 
 FORMS += \
     src/qt/forms/coincontroldialog.ui \
@@ -408,7 +408,7 @@ FORMS += src/qt/forms/qrcodedialog.ui
 CODECFORTR = UTF-8
 
 # for lrelease/lupdate
-# also add new translations to src/qt/era.qrc under translations/
+# also add new translations to src/qt/graphicscoin.qrc under translations/
 TRANSLATIONS = $$files(src/qt/locale/era_*.ts)
 
 isEmpty(QMAKE_LRELEASE) {
@@ -426,7 +426,7 @@ QMAKE_EXTRA_COMPILERS += TSQM
 
 # "Other files" to show in Qt Creator
 OTHER_FILES += \
-    doc/*.rst doc/*.txt doc/README README.md res/era-qt.rc
+    doc/*.rst doc/*.txt doc/README README.md res/graphicscoin-qt.rc
 
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
@@ -461,7 +461,7 @@ isEmpty(BOOST_INCLUDE_PATH) {
 }
 
 windows:DEFINES += WIN32
-windows:RC_FILE = src/qt/res/era-qt.rc
+windows:RC_FILE = src/qt/res/graphicscoin-qt.rc
 
 windows:!contains(MINGW_THREAD_BUGFIX, 0) {
     # At least qmake's win32-g++-cross profile is missing the -lmingwthrd
@@ -478,8 +478,8 @@ macx:HEADERS += src/qt/macdockiconhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/era.icns
-macx:TARGET = "Era-Qt"
+macx:ICON = src/qt/res/icons/graphicscoin.icns
+macx:TARGET = "GraphicsCoin-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread

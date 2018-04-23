@@ -2589,7 +2589,7 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
+        <source>Send command to -server or graphicscoind</source>
         <translation>向-server服务器或erad发送命令</translation>
     </message>
     <message>
@@ -2617,8 +2617,8 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
-        <translation>指定pid文件(默认: erad.pid)</translation>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
+        <translation>指定pid文件(默认: graphicscoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>

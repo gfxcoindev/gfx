@@ -1,7 +1,7 @@
 
-Era development tree
+GraphicsCoin development tree
 
-Era is a PoS-based cryptocurrency.
+GraphicsCoin is a PoS-based cryptocurrency.
 
 Development process
 ===========================
@@ -16,10 +16,10 @@ or are controversial.
 
 The master branch is regularly built and tested, but is not guaranteed
 to be completely stable. Tags are regularly created to indicate new
-stable release versions of Era.
+stable release versions of GraphicsCoin.
 
 Feature branches are created when there are major new features being
-worked on by several people.
+worked on by sevGraphicsCoinl people.
 
 From time to time a pull request will become outdated. If this occurs, and
 the pull is no longer automatically mergeable; a comment on the pull will

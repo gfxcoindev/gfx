@@ -1,4 +1,4 @@
-Era 0.4.4 BETA
+GraphicsCoin 0.4.4 BETA
 
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2013 PPCoin Developers
@@ -11,8 +11,8 @@ cryptographic software written by Eric Young (eay@cryptsoft.com).
 
 Intro
 -----
-Era is a free open source project derived from Era, with
+GraphicsCoin is a free open source project derived from GraphicsCoin, with
 the goal of providing a long-term energy-efficient scrypt-based crypto-currency.
-Built on the foundation of Era, PPCoin and NovaCoin, innovations such as proof-of-stake and scrypt
+Built on the foundation of PPCoin and NovaCoin, innovations such as proof-of-stake and scrypt
 help further advance the field of crypto-currency.
 

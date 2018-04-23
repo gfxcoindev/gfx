@@ -2584,8 +2584,8 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Kommando versenden an -server oder erad </translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Kommando versenden an -server oder graphicscoind </translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2609,7 +2609,7 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
         <translation>PID Datei angeben (Standard: graphicscoin.pid)</translation>
     </message>
     <message>

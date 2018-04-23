@@ -2587,7 +2587,7 @@ Naslov: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
+        <source>Send command to -server or graphicscoind</source>
         <translation>Pošlji ukaz na -server ali blackoind</translation>
     </message>
     <message>
@@ -2612,7 +2612,7 @@ Naslov: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
         <translation>Določi pid datoteko (privzeto: graphicscoin.pid)</translation>
     </message>
     <message>

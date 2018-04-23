@@ -7,12 +7,12 @@ handle those translations.
 Files and Folders
 -----------------
 
-### era-qt.pro
+### graphicscoin-qt.pro
 
 This file takes care of generating `.qm` files from `.ts` files. It is mostly
 automated.
 
-### src/qt/era.qrc
+### src/qt/graphicscoin.qrc
 
 This file must be updated whenever a new translation is added. Please note that
 files must end with `.qm`, not `.ts`.
@@ -44,7 +44,7 @@ Syncing with transifex
 
 We are using http://transifex.net as a frontend for translating the client.
 
-https://www.transifex.net/projects/p/era/resource/tx/
+https://www.transifex.net/projects/p/graphicscoin/resource/tx/
 
 The "transifex client" (see: http://help.transifex.net/features/client/)
 will help with fetching new translations from transifex. Use the following
@@ -55,7 +55,7 @@ config to be able to connect with the client.
     [main]
     host = https://www.transifex.net
 
-    [era.tx]
+    [graphicscoin.tx]
     file_filter = src/qt/locale/era_<lang>.ts
     source_file = src/qt/locale/era_en.ts
     source_lang = en
@@ -65,7 +65,7 @@ config to be able to connect with the client.
     [main]
     host = https://www.transifex.net
 
-    [era.tx]
+    [graphicscoin.tx]
     file_filter = src\qt\locale\era_<lang>.ts
     source_file = src\qt\locale\era_en.ts
     source_lang = en
@@ -75,6 +75,6 @@ It is also possible to directly download new translations one by one from transi
 ### Fetching new translations
 
 1. `tx pull -a`
-2. update `src/qt/era.qrc` manually or via
+2. update `src/qt/graphicscoin.qrc` manually or via
    `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(era_\(.*\)\).ts/<file alias="\2">locale/\1.qm<\/file>/'`
 3. `git add` new translations from `src/qt/locale/`

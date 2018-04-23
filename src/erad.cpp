@@ -49,13 +49,13 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to erad / RPC client
+            // First part of help message is specific to graphicscoind / RPC client
             std::string strUsage = _("GraphicsCoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  erad [options]                     " + "\n" +
-                  "  erad [options] <command> [params]  " + _("Send command to -server or erad") + "\n" +
-                  "  erad [options] help                " + _("List commands") + "\n" +
-                  "  erad [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  graphicscoind [options]                     " + "\n" +
+                  "  graphicscoind [options] <command> [params]  " + _("Send command to -server or graphicscoind") + "\n" +
+                  "  graphicscoind [options] help                " + _("List commands") + "\n" +
+                  "  graphicscoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -129,7 +129,7 @@ int main(int argc, char* argv[])
     bool fRet = false;
     fHaveGUI = false;
 
-    // Connect erad signal handlers
+    // Connect graphicscoind signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);

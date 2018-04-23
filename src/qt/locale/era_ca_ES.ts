@@ -2585,8 +2585,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Enviar comandes a -server o erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Enviar comandes a -server o graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2610,8 +2610,8 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
-        <translation>Especificar arxiu pid (per defecte: erad.pid)</translation>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
+        <translation>Especificar arxiu pid (per defecte: graphicscoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>

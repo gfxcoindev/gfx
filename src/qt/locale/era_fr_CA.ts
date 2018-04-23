@@ -2589,8 +2589,8 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Envoyer commande à -server ou erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Envoyer commande à -server ou graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2614,8 +2614,8 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
-        <translation>Spécifier le fichier pid (defaut: erad.pid)
+        <source>Specify pid file (default: graphicscoind.pid)</source>
+        <translation>Spécifier le fichier pid (defaut: graphicscoind.pid)
 </translation>
     </message>
     <message>

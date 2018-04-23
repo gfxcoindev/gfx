@@ -2594,8 +2594,8 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Syötä komento kohteeseen -server tai erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Syötä komento kohteeseen -server tai graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2619,7 +2619,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
         <translation>Määritä prosessitiedosto (oletus: graphicscoin.pid)</translation>
     </message>
     <message>

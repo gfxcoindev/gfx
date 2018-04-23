@@ -6,7 +6,7 @@
 #include "version.h"
 
 // Name of client reported in the 'version' message. Report the same name
-// for both erad and graphicscoin-qt, to make it harder for attackers to
+// for both graphicscoind and graphicscoin-qt, to make it harder for attackers to
 // target servers or GUI users specifically.
 const std::string CLIENT_NAME("Eraoshi");
 

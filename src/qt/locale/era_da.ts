@@ -2589,8 +2589,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Send kommando til-server eller erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Send kommando til-server eller graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2614,8 +2614,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
-        <translation>Angiv pid fil (standard: erad.pid)</translation>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
+        <translation>Angiv pid fil (standard: graphicscoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>

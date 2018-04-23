@@ -2588,7 +2588,7 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
+        <source>Send command to -server or graphicscoind</source>
         <translation>-server か eradへコマンドを送る。</translation>
     </message>
     <message>
@@ -2613,8 +2613,8 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
-        <translation>pid ファイルを特定する (デフォルト: erad.pid)</translation>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
+        <translation>pid ファイルを特定する (デフォルト: graphicscoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>

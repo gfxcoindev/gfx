@@ -2594,8 +2594,8 @@ Adres: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>-sunucu veya erad&apos;ye komut gönder</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>-sunucu veya graphicscoind&apos;ye komut gönder</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2619,7 +2619,7 @@ Adres: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
         <translation>pid dosyasını belirt (varsayılan: graphicscoin.pid)</translation>
     </message>
     <message>

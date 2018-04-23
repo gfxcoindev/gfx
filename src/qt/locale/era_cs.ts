@@ -2589,8 +2589,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or erad</source>
-        <translation>Pošli příkaz na -server nebo erad</translation>
+        <source>Send command to -server or graphicscoind</source>
+        <translation>Pošli příkaz na -server nebo graphicscoind</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2614,8 +2614,8 @@ To znamená, že je potřebný poplatek ve výši nejméně %2.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: erad.pid)</source>
-        <translation>Urči pid soubor (výchozí: erad.pid)</translation>
+        <source>Specify pid file (default: graphicscoind.pid)</source>
+        <translation>Urči pid soubor (výchozí: graphicscoind.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
