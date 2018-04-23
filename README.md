@@ -19,7 +19,7 @@ to be completely stable. Tags are regularly created to indicate new
 stable release versions of GraphicsCoin.
 
 Feature branches are created when there are major new features being
-worked on by sevGraphicsCoinl people.
+worked on by several people.
 
 From time to time a pull request will become outdated. If this occurs, and
 the pull is no longer automatically mergeable; a comment on the pull will
