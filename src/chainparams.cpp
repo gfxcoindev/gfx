@@ -74,30 +74,13 @@ public:
 
        /*
         Hashed MainNet Genesis Block Output
-        block.hashMerkleRoot == 22a2e4e28386bf75759112222b20cf3b889cd60f5e55d7184f8dbdec4d8dc6ff
-        block.nTime = 1520366800
+        block.hashMerkleRoot == dd868b1a2ee686cd1bb4391697827416dc00f8bed2e0c9f1ce6ddcea6bac5572
+        block.nTime = 1524516965
         block.nNonce = 53683
-        block.GetHash = 0000aab7dff29b0749519a7886b8a8d3f2806eb5dd861f9a0dbb7441f9a97f6a
+        block.GetHash = efc62a616e63a58a331875e8ec181288bff23ec179e47a385c1f86cb5cf61fbf
        */
 
-        hashGenesisBlock = genesis.GetHash();
-		
-		
-		//Generate new hashes. remove
-		
-		if (hashGenesisBlock != uint256("0xefc62a616e63a58a331875e8ec181288bff23ec179e47a385c1f86cb5cf61fbf")) 
-		{
-
-			printf("MAIN genesis time = %u \n", genesis.nTime);
-			printf("MAIN genesis nonce = %u \n", genesis.nNonce);
-			printf("MAIN genesis hash = %s\n", genesis.GetHash().ToString().c_str());
-			printf("MAIN merkleroot hash = %s\n", genesis.BuildMerkleTree().ToString().c_str());
-		}
-		
-		
-		
-		
-		
+        hashGenesisBlock = genesis.GetHash();		
         assert(hashGenesisBlock == uint256("0xefc62a616e63a58a331875e8ec181288bff23ec179e47a385c1f86cb5cf61fbf"));
         assert(genesis.hashMerkleRoot == uint256("0xdd868b1a2ee686cd1bb4391697827416dc00f8bed2e0c9f1ce6ddcea6bac5572"));
 
@@ -152,29 +135,13 @@ public:
 
        /*
         Hashed TestNet Genesis Block Output
-        block.hashMerkleRoot == 22a2e4e28386bf75759112222b20cf3b889cd60f5e55d7184f8dbdec4d8dc6ff
+        block.hashMerkleRoot == dd868b1a2ee686cd1bb4391697827416dc00f8bed2e0c9f1ce6ddcea6bac5572
         block.nTime = 1520366800
         block.nNonce = 13731
-        block.GetHash = 000149d0c0dec3468068735e9f9ccdd6d329ed2f6f60add7459773e502f067c5
+        block.GetHash = aff44d1af53327e7101a5665818b794cc90e88d86dd5d6b8c6725e39374d1934
        */
         
-        hashGenesisBlock = genesis.GetHash();
-		
-		//Generate new hashes. remove
-		
-		if (hashGenesisBlock != uint256("0xaff44d1af53327e7101a5665818b794cc90e88d86dd5d6b8c6725e39374d1934")) 
-		{
-
-			printf("TEST genesis time = %u \n", genesis.nTime);
-			printf("TEST genesis nonce = %u \n", genesis.nNonce);
-			printf("TEST genesis hash = %s\n", genesis.GetHash().ToString().c_str());
-			printf("TEST merkleroot hash = %s\n", genesis.BuildMerkleTree().ToString().c_str());
-		}
-		
-		
-		
-		
-		
+        hashGenesisBlock = genesis.GetHash();		
         assert(hashGenesisBlock == uint256("0xaff44d1af53327e7101a5665818b794cc90e88d86dd5d6b8c6725e39374d1934"));
 
         vFixedSeeds.clear();
