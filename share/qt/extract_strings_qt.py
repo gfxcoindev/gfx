@@ -6,7 +6,7 @@ they can be picked up by Qt linguist.
 from subprocess import Popen, PIPE
 import glob
 
-OUT_CPP="src/qt/erastrings.cpp"
+OUT_CPP="src/qt/graphicscoinstrings.cpp"
 EMPTY=['""']
 
 def parse_po(text):

@@ -195,7 +195,7 @@ QMAKE_CXXFLAGS_WARN_ON = -fdiagnostics-show-option -Wall -Wextra -Wno-ignored-qu
 
 # Input
 DEPENDPATH += src src/json src/qt
-HEADERS += src/qt/eragui.h \
+HEADERS += src/qt/graphicscoingui.h \
     src/qt/transactiontablemodel.h \
     src/qt/addresstablemodel.h \
     src/qt/optionsdialog.h \
@@ -207,7 +207,7 @@ HEADERS += src/qt/eragui.h \
     src/qt/signverifymessagedialog.h \
     src/qt/aboutdialog.h \
     src/qt/editaddressdialog.h \
-    src/qt/eraaddressvalidator.h \
+    src/qt/graphicscoinaddressvalidator.h \
     src/addrman.h \
     src/base58.h \
     src/bignum.h \
@@ -254,7 +254,7 @@ HEADERS += src/qt/eragui.h \
     src/qt/trafficgraphwidget.h \
     src/qt/transactiondesc.h \
     src/qt/transactiondescdialog.h \
-    src/qt/eraamountfield.h \
+    src/qt/graphicscoinamountfield.h \
     src/wallet.h \
     src/keystore.h \
     src/qt/transactionfilterproxy.h \
@@ -269,7 +269,7 @@ HEADERS += src/qt/eragui.h \
     src/crypter.h \
     src/qt/sendcoinsentry.h \
     src/qt/qvalidatedlineedit.h \
-    src/qt/eraunits.h \
+    src/qt/graphicscoinunits.h \
     src/qt/qvaluecombobox.h \
     src/qt/askpassphrasedialog.h \
     src/protocol.h \
@@ -304,7 +304,7 @@ HEADERS += src/qt/eragui.h \
     src/hmq1725/sph_haval.h \
     src/hmq1725/sph_sha2.h
 
-SOURCES += src/qt/graphicscoin.cpp src/qt/eragui.cpp \
+SOURCES += src/qt/graphicscoin.cpp src/qt/graphicscoingui.cpp \
     src/qt/transactiontablemodel.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/optionsdialog.cpp \
@@ -316,7 +316,7 @@ SOURCES += src/qt/graphicscoin.cpp src/qt/eragui.cpp \
     src/qt/signverifymessagedialog.cpp \
     src/qt/aboutdialog.cpp \
     src/qt/editaddressdialog.cpp \
-    src/qt/eraaddressvalidator.cpp \
+    src/qt/graphicscoinaddressvalidator.cpp \
     src/chainparams.cpp \
     src/version.cpp \
     src/sync.cpp \
@@ -343,8 +343,8 @@ SOURCES += src/qt/graphicscoin.cpp src/qt/eragui.cpp \
     src/qt/trafficgraphwidget.cpp \
     src/qt/transactiondesc.cpp \
     src/qt/transactiondescdialog.cpp \
-    src/qt/erastrings.cpp \
-    src/qt/eraamountfield.cpp \
+    src/qt/graphicscoinstrings.cpp \
+    src/qt/graphicscoinamountfield.cpp \
     src/wallet.cpp \
     src/keystore.cpp \
     src/qt/transactionfilterproxy.cpp \
@@ -366,7 +366,7 @@ SOURCES += src/qt/graphicscoin.cpp src/qt/eragui.cpp \
     src/crypter.cpp \
     src/qt/sendcoinsentry.cpp \
     src/qt/qvalidatedlineedit.cpp \
-    src/qt/eraunits.cpp \
+    src/qt/graphicscoinunits.cpp \
     src/qt/qvaluecombobox.cpp \
     src/qt/askpassphrasedialog.cpp \
     src/protocol.cpp \

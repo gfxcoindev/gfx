@@ -305,7 +305,7 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
 <context>
     <name>EraGUI</name>
     <message>
-        <location filename="../eragui.cpp" line="+297"/>
+        <location filename="../graphicscoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
         <translation>Podpisz wiado&amp;mość...</translation>
     </message>
@@ -2567,7 +2567,7 @@ Adres: %4
 <context>
     <name>graphicscoin-core</name>
     <message>
-        <location filename="../erastrings.cpp" line="+8"/>
+        <location filename="../graphicscoinstrings.cpp" line="+8"/>
         <source>GraphicsCoin version</source>
         <translation type="unfinished"/>
     </message>

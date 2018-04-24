@@ -3,7 +3,7 @@
 
 #include "init.h"
 #include "base58.h"
-#include "eraunits.h"
+#include "graphicscoinunits.h"
 #include "walletmodel.h"
 #include "addresstablemodel.h"
 #include "optionsmodel.h"

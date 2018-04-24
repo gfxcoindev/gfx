@@ -312,7 +312,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
 <context>
     <name>EraGUI</name>
     <message>
-        <location filename="../eragui.cpp" line="+297"/>
+        <location filename="../graphicscoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
         <translation>Allekirjoita &amp;viesti...</translation>
     </message>
@@ -2583,7 +2583,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
 <context>
     <name>graphicscoin-core</name>
     <message>
-        <location filename="../erastrings.cpp" line="+8"/>
+        <location filename="../graphicscoinstrings.cpp" line="+8"/>
         <source>GraphicsCoin version</source>
         <translation>Erain versio</translation>
     </message>

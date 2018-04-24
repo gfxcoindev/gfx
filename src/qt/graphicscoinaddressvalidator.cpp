@@ -1,4 +1,4 @@
-#include "eraaddressvalidator.h"
+#include "graphicscoinaddressvalidator.h"
 
 /* Base58 characters are:
      "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"

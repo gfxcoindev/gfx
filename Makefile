@@ -67,7 +67,7 @@ SOURCES       = src/txdb-leveldb.cpp \
 		src/haval.c \
 		src/sha2big.c \
 		src/qt/graphicscoin.cpp \
-		src/qt/eragui.cpp \
+		src/qt/graphicscoingui.cpp \
 		src/qt/transactiontablemodel.cpp \
 		src/qt/addresstablemodel.cpp \
 		src/qt/optionsdialog.cpp \
@@ -79,7 +79,7 @@ SOURCES       = src/txdb-leveldb.cpp \
 		src/qt/signverifymessagedialog.cpp \
 		src/qt/aboutdialog.cpp \
 		src/qt/editaddressdialog.cpp \
-		src/qt/eraaddressvalidator.cpp \
+		src/qt/graphicscoinaddressvalidator.cpp \
 		src/chainparams.cpp \
 		src/version.cpp \
 		src/sync.cpp \
@@ -106,8 +106,8 @@ SOURCES       = src/txdb-leveldb.cpp \
 		src/qt/trafficgraphwidget.cpp \
 		src/qt/transactiondesc.cpp \
 		src/qt/transactiondescdialog.cpp \
-		src/qt/erastrings.cpp \
-		src/qt/eraamountfield.cpp \
+		src/qt/graphicscoinstrings.cpp \
+		src/qt/graphicscoinamountfield.cpp \
 		src/wallet.cpp \
 		src/keystore.cpp \
 		src/qt/transactionfilterproxy.cpp \
@@ -129,7 +129,7 @@ SOURCES       = src/txdb-leveldb.cpp \
 		src/crypter.cpp \
 		src/qt/sendcoinsentry.cpp \
 		src/qt/qvalidatedlineedit.cpp \
-		src/qt/eraunits.cpp \
+		src/qt/graphicscoinunits.cpp \
 		src/qt/qvaluecombobox.cpp \
 		src/qt/askpassphrasedialog.cpp \
 		src/protocol.cpp \
@@ -143,8 +143,8 @@ SOURCES       = src/txdb-leveldb.cpp \
 		src/scrypt-x86_64.S \
 		src/scrypt.cpp \
 		src/pbkdf2.cpp \
-		src/qt/qrcodedialog.cpp qrc_era.cpp \
-		build/moc_eragui.cpp \
+		src/qt/qrcodedialog.cpp qrc_graphicscoin \
+		build/moc_graphicscoingui.cpp \
 		build/moc_transactiontablemodel.cpp \
 		build/moc_addresstablemodel.cpp \
 		build/moc_optionsdialog.cpp \
@@ -156,7 +156,7 @@ SOURCES       = src/txdb-leveldb.cpp \
 		build/moc_signverifymessagedialog.cpp \
 		build/moc_aboutdialog.cpp \
 		build/moc_editaddressdialog.cpp \
-		build/moc_eraaddressvalidator.cpp \
+		build/moc_graphicscoinaddressvalidator.cpp \
 		build/moc_clientmodel.cpp \
 		build/moc_guiutil.cpp \
 		build/moc_optionsmodel.cpp \
@@ -164,7 +164,7 @@ SOURCES       = src/txdb-leveldb.cpp \
 		build/moc_trafficgraphwidget.cpp \
 		build/moc_transactiondesc.cpp \
 		build/moc_transactiondescdialog.cpp \
-		build/moc_eraamountfield.cpp \
+		build/moc_graphicscoinamountfield.cpp \
 		build/moc_transactionfilterproxy.cpp \
 		build/moc_transactionview.cpp \
 		build/moc_walletmodel.cpp \
@@ -172,7 +172,7 @@ SOURCES       = src/txdb-leveldb.cpp \
 		build/moc_csvmodelwriter.cpp \
 		build/moc_sendcoinsentry.cpp \
 		build/moc_qvalidatedlineedit.cpp \
-		build/moc_eraunits.cpp \
+		build/moc_graphicscoinunits.cpp \
 		build/moc_qvaluecombobox.cpp \
 		build/moc_askpassphrasedialog.cpp \
 		build/moc_notificator.cpp \
@@ -381,7 +381,7 @@ DIST          = /usr/lib/i386-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/i386-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/i386-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/i386-linux-gnu/qt5/mkspecs/features/lex.prf \
-		graphicscoin-qt.pro src/qt/eragui.h \
+		graphicscoin-qt.pro src/qt/graphicscoingui.h \
 		src/qt/transactiontablemodel.h \
 		src/qt/addresstablemodel.h \
 		src/qt/optionsdialog.h \
@@ -393,7 +393,7 @@ DIST          = /usr/lib/i386-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		src/qt/signverifymessagedialog.h \
 		src/qt/aboutdialog.h \
 		src/qt/editaddressdialog.h \
-		src/qt/eraaddressvalidator.h \
+		src/qt/graphicscoinaddressvalidator.h \
 		src/addrman.h \
 		src/base58.h \
 		src/bignum.h \
@@ -440,7 +440,7 @@ DIST          = /usr/lib/i386-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		src/qt/trafficgraphwidget.h \
 		src/qt/transactiondesc.h \
 		src/qt/transactiondescdialog.h \
-		src/qt/eraamountfield.h \
+		src/qt/graphicscoinamountfield.h \
 		src/wallet.h \
 		src/keystore.h \
 		src/qt/transactionfilterproxy.h \
@@ -455,7 +455,7 @@ DIST          = /usr/lib/i386-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		src/crypter.h \
 		src/qt/sendcoinsentry.h \
 		src/qt/qvalidatedlineedit.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/qvaluecombobox.h \
 		src/qt/askpassphrasedialog.h \
 		src/protocol.h \
@@ -507,7 +507,7 @@ DIST          = /usr/lib/i386-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		src/haval.c \
 		src/sha2big.c \
 		src/qt/graphicscoin.cpp \
-		src/qt/eragui.cpp \
+		src/qt/graphicscoingui.cpp \
 		src/qt/transactiontablemodel.cpp \
 		src/qt/addresstablemodel.cpp \
 		src/qt/optionsdialog.cpp \
@@ -519,7 +519,7 @@ DIST          = /usr/lib/i386-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		src/qt/signverifymessagedialog.cpp \
 		src/qt/aboutdialog.cpp \
 		src/qt/editaddressdialog.cpp \
-		src/qt/eraaddressvalidator.cpp \
+		src/qt/graphicscoinaddressvalidator.cpp \
 		src/chainparams.cpp \
 		src/version.cpp \
 		src/sync.cpp \
@@ -546,8 +546,8 @@ DIST          = /usr/lib/i386-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		src/qt/trafficgraphwidget.cpp \
 		src/qt/transactiondesc.cpp \
 		src/qt/transactiondescdialog.cpp \
-		src/qt/erastrings.cpp \
-		src/qt/eraamountfield.cpp \
+		src/qt/graphicscoinstrings.cpp \
+		src/qt/graphicscoinamountfield.cpp \
 		src/wallet.cpp \
 		src/keystore.cpp \
 		src/qt/transactionfilterproxy.cpp \
@@ -569,7 +569,7 @@ DIST          = /usr/lib/i386-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		src/crypter.cpp \
 		src/qt/sendcoinsentry.cpp \
 		src/qt/qvalidatedlineedit.cpp \
-		src/qt/eraunits.cpp \
+		src/qt/graphicscoinunits.cpp \
 		src/qt/qvaluecombobox.cpp \
 		src/qt/askpassphrasedialog.cpp \
 		src/protocol.cpp \
@@ -785,8 +785,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents src/qt/locale/era_af_ZA.ts src/qt/locale/era_ar.ts src/qt/locale/era_be_BY.ts src/qt/locale/era_bg.ts src/qt/locale/era_bs.ts src/qt/locale/era_ca.ts src/qt/locale/era_ca@valencia.ts src/qt/locale/era_ca_ES.ts src/qt/locale/era_cs.ts src/qt/locale/era_cy.ts src/qt/locale/era_da.ts src/qt/locale/era_de.ts src/qt/locale/era_el_GR.ts src/qt/locale/era_en.ts src/qt/locale/era_eo.ts src/qt/locale/era_es.ts src/qt/locale/era_es_AR.ts src/qt/locale/era_es_CL.ts src/qt/locale/era_es_DO.ts src/qt/locale/era_es_MX.ts src/qt/locale/era_es_UY.ts src/qt/locale/era_et.ts src/qt/locale/era_eu_ES.ts src/qt/locale/era_fa.ts src/qt/locale/era_fa_IR.ts src/qt/locale/era_fi.ts src/qt/locale/era_fr.ts src/qt/locale/era_fr_CA.ts src/qt/locale/era_gl.ts src/qt/locale/era_he.ts src/qt/locale/era_hi_IN.ts src/qt/locale/era_hr.ts src/qt/locale/era_hu.ts src/qt/locale/era_id_ID.ts src/qt/locale/era_it.ts src/qt/locale/era_ja.ts src/qt/locale/era_ka.ts src/qt/locale/era_kk_KZ.ts src/qt/locale/era_ko_KR.ts src/qt/locale/era_ky.ts src/qt/locale/era_la.ts src/qt/locale/era_lt.ts src/qt/locale/era_lv_LV.ts src/qt/locale/era_ms_MY.ts src/qt/locale/era_nb.ts src/qt/locale/era_nl.ts src/qt/locale/era_pam.ts src/qt/locale/era_pl.ts src/qt/locale/era_pt_BR.ts src/qt/locale/era_pt_PT.ts src/qt/locale/era_ro_RO.ts src/qt/locale/era_ru.ts src/qt/locale/era_sah.ts src/qt/locale/era_sk.ts src/qt/locale/era_sl_SI.ts src/qt/locale/era_sq.ts src/qt/locale/era_sr.ts src/qt/locale/era_sv.ts src/qt/locale/era_th_TH.ts src/qt/locale/era_tr.ts src/qt/locale/era_uk.ts src/qt/locale/era_ur_PK.ts src/qt/locale/era_vi.ts src/qt/locale/era_vi_VN.ts src/qt/locale/era_zh_CN.ts src/qt/locale/era_zh_TW.ts $(DISTDIR)/
 	$(COPY_FILE) --parents src/qt/graphicscoin.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents src/qt/eragui.h src/qt/transactiontablemodel.h src/qt/addresstablemodel.h src/qt/optionsdialog.h src/qt/coincontroldialog.h src/qt/coincontroltreewidget.h src/qt/sendcoinsdialog.h src/qt/addressbookpage.h src/qt/blockbrowser.h src/qt/signverifymessagedialog.h src/qt/aboutdialog.h src/qt/editaddressdialog.h src/qt/eraaddressvalidator.h src/addrman.h src/base58.h src/bignum.h src/chainparams.h src/chainparamsseeds.h src/checkpoints.h src/compat.h src/coincontrol.h src/sync.h src/util.h src/hash.h src/uint256.h src/kernel.h src/scrypt.h src/pbkdf2.h src/serialize.h src/core.h src/main.h src/miner.h src/net.h src/key.h src/db.h src/txdb.h src/txmempool.h src/walletdb.h src/script.h src/init.h src/mruset.h src/json/json_spirit_writer_template.h src/json/json_spirit_writer.h src/json/json_spirit_value.h src/json/json_spirit_utils.h src/json/json_spirit_stream_reader.h src/json/json_spirit_reader_template.h src/json/json_spirit_reader.h src/json/json_spirit_error_position.h src/json/json_spirit.h src/qt/clientmodel.h src/qt/guiutil.h src/qt/transactionrecord.h src/qt/guiconstants.h src/qt/optionsmodel.h src/qt/monitoreddatamapper.h src/qt/trafficgraphwidget.h src/qt/transactiondesc.h src/qt/transactiondescdialog.h src/qt/eraamountfield.h src/wallet.h src/keystore.h src/qt/transactionfilterproxy.h src/qt/transactionview.h src/qt/walletmodel.h src/rpcclient.h src/rpcprotocol.h src/rpcserver.h src/timedata.h src/qt/overviewpage.h src/qt/csvmodelwriter.h src/crypter.h src/qt/sendcoinsentry.h src/qt/qvalidatedlineedit.h src/qt/eraunits.h src/qt/qvaluecombobox.h src/qt/askpassphrasedialog.h src/protocol.h src/qt/notificator.h src/qt/paymentserver.h src/allocators.h src/ui_interface.h src/qt/rpcconsole.h src/version.h src/netbase.h src/clientversion.h src/threadsafety.h src/tinyformat.h src/hashblock.h src/sph_blake.h src/sph_bmw.h src/sph_groestl.h src/sph_jh.h src/sph_keccak.h src/sph_skein.h src/sph_types.h src/sph_luffa.h src/sph_cubehash.h src/sph_echo.h src/sph_shavite.h src/sph_simd.h src/sph_hamsi.h src/sph_fugue.h src/sph_shabal.h src/sph_whirlpool.h src/sph_haval.h src/sph_sha2.h src/qt/qrcodedialog.h $(DISTDIR)/
-	$(COPY_FILE) --parents src/txdb-leveldb.cpp src/blake.c src/bmw.c src/groestl.c src/jh.c src/keccak.c src/skein.c src/luffa.c src/cubehash.c src/shavite.c src/echo.c src/simd.c src/hamsi.c src/fugue.c src/shabal.c src/whirlpool.c src/haval.c src/sha2big.c src/qt/graphicscoin.cpp src/qt/eragui.cpp src/qt/transactiontablemodel.cpp src/qt/addresstablemodel.cpp src/qt/optionsdialog.cpp src/qt/sendcoinsdialog.cpp src/qt/coincontroldialog.cpp src/qt/coincontroltreewidget.cpp src/qt/addressbookpage.cpp src/qt/blockbrowser.cpp src/qt/signverifymessagedialog.cpp src/qt/aboutdialog.cpp src/qt/editaddressdialog.cpp src/qt/eraaddressvalidator.cpp src/chainparams.cpp src/version.cpp src/sync.cpp src/txmempool.cpp src/util.cpp src/hash.cpp src/netbase.cpp src/key.cpp src/script.cpp src/core.cpp src/main.cpp src/miner.cpp src/init.cpp src/net.cpp src/checkpoints.cpp src/addrman.cpp src/db.cpp src/walletdb.cpp src/qt/clientmodel.cpp src/qt/guiutil.cpp src/qt/transactionrecord.cpp src/qt/optionsmodel.cpp src/qt/monitoreddatamapper.cpp src/qt/trafficgraphwidget.cpp src/qt/transactiondesc.cpp src/qt/transactiondescdialog.cpp src/qt/erastrings.cpp src/qt/eraamountfield.cpp src/wallet.cpp src/keystore.cpp src/qt/transactionfilterproxy.cpp src/qt/transactionview.cpp src/qt/walletmodel.cpp src/rpcclient.cpp src/rpcprotocol.cpp src/rpcserver.cpp src/rpcdump.cpp src/rpcmisc.cpp src/rpcnet.cpp src/rpcmining.cpp src/rpcwallet.cpp src/rpcblockchain.cpp src/rpcrawtransaction.cpp src/timedata.cpp src/qt/overviewpage.cpp src/qt/csvmodelwriter.cpp src/crypter.cpp src/qt/sendcoinsentry.cpp src/qt/qvalidatedlineedit.cpp src/qt/eraunits.cpp src/qt/qvaluecombobox.cpp src/qt/askpassphrasedialog.cpp src/protocol.cpp src/qt/notificator.cpp src/qt/paymentserver.cpp src/qt/rpcconsole.cpp src/noui.cpp src/kernel.cpp src/scrypt-arm.S src/scrypt-x86.S src/scrypt-x86_64.S src/scrypt.cpp src/pbkdf2.cpp src/qt/qrcodedialog.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents src/qt/graphicscoingui.h src/qt/transactiontablemodel.h src/qt/addresstablemodel.h src/qt/optionsdialog.h src/qt/coincontroldialog.h src/qt/coincontroltreewidget.h src/qt/sendcoinsdialog.h src/qt/addressbookpage.h src/qt/blockbrowser.h src/qt/signverifymessagedialog.h src/qt/aboutdialog.h src/qt/editaddressdialog.h src/qt/graphicscoinaddressvalidator.h src/addrman.h src/base58.h src/bignum.h src/chainparams.h src/chainparamsseeds.h src/checkpoints.h src/compat.h src/coincontrol.h src/sync.h src/util.h src/hash.h src/uint256.h src/kernel.h src/scrypt.h src/pbkdf2.h src/serialize.h src/core.h src/main.h src/miner.h src/net.h src/key.h src/db.h src/txdb.h src/txmempool.h src/walletdb.h src/script.h src/init.h src/mruset.h src/json/json_spirit_writer_template.h src/json/json_spirit_writer.h src/json/json_spirit_value.h src/json/json_spirit_utils.h src/json/json_spirit_stream_reader.h src/json/json_spirit_reader_template.h src/json/json_spirit_reader.h src/json/json_spirit_error_position.h src/json/json_spirit.h src/qt/clientmodel.h src/qt/guiutil.h src/qt/transactionrecord.h src/qt/guiconstants.h src/qt/optionsmodel.h src/qt/monitoreddatamapper.h src/qt/trafficgraphwidget.h src/qt/transactiondesc.h src/qt/transactiondescdialog.h src/qt/graphicscoinamountfield.h src/wallet.h src/keystore.h src/qt/transactionfilterproxy.h src/qt/transactionview.h src/qt/walletmodel.h src/rpcclient.h src/rpcprotocol.h src/rpcserver.h src/timedata.h src/qt/overviewpage.h src/qt/csvmodelwriter.h src/crypter.h src/qt/sendcoinsentry.h src/qt/qvalidatedlineedit.h src/qt/graphicscoinunits.h src/qt/qvaluecombobox.h src/qt/askpassphrasedialog.h src/protocol.h src/qt/notificator.h src/qt/paymentserver.h src/allocators.h src/ui_interface.h src/qt/rpcconsole.h src/version.h src/netbase.h src/clientversion.h src/threadsafety.h src/tinyformat.h src/hashblock.h src/sph_blake.h src/sph_bmw.h src/sph_groestl.h src/sph_jh.h src/sph_keccak.h src/sph_skein.h src/sph_types.h src/sph_luffa.h src/sph_cubehash.h src/sph_echo.h src/sph_shavite.h src/sph_simd.h src/sph_hamsi.h src/sph_fugue.h src/sph_shabal.h src/sph_whirlpool.h src/sph_haval.h src/sph_sha2.h src/qt/qrcodedialog.h $(DISTDIR)/
+	$(COPY_FILE) --parents src/txdb-leveldb.cpp src/blake.c src/bmw.c src/groestl.c src/jh.c src/keccak.c src/skein.c src/luffa.c src/cubehash.c src/shavite.c src/echo.c src/simd.c src/hamsi.c src/fugue.c src/shabal.c src/whirlpool.c src/haval.c src/sha2big.c src/qt/graphicscoin.cpp src/qt/graphicscoingui.cpp src/qt/transactiontablemodel.cpp src/qt/addresstablemodel.cpp src/qt/optionsdialog.cpp src/qt/sendcoinsdialog.cpp src/qt/coincontroldialog.cpp src/qt/coincontroltreewidget.cpp src/qt/addressbookpage.cpp src/qt/blockbrowser.cpp src/qt/signverifymessagedialog.cpp src/qt/aboutdialog.cpp src/qt/editaddressdialog.cpp src/qt/graphicscoinaddressvalidator.cpp src/chainparams.cpp src/version.cpp src/sync.cpp src/txmempool.cpp src/util.cpp src/hash.cpp src/netbase.cpp src/key.cpp src/script.cpp src/core.cpp src/main.cpp src/miner.cpp src/init.cpp src/net.cpp src/checkpoints.cpp src/addrman.cpp src/db.cpp src/walletdb.cpp src/qt/clientmodel.cpp src/qt/guiutil.cpp src/qt/transactionrecord.cpp src/qt/optionsmodel.cpp src/qt/monitoreddatamapper.cpp src/qt/trafficgraphwidget.cpp src/qt/transactiondesc.cpp src/qt/transactiondescdialog.cpp src/qt/graphicscoinstrings.cpp src/qt/graphicscoinamountfield.cpp src/wallet.cpp src/keystore.cpp src/qt/transactionfilterproxy.cpp src/qt/transactionview.cpp src/qt/walletmodel.cpp src/rpcclient.cpp src/rpcprotocol.cpp src/rpcserver.cpp src/rpcdump.cpp src/rpcmisc.cpp src/rpcnet.cpp src/rpcmining.cpp src/rpcwallet.cpp src/rpcblockchain.cpp src/rpcrawtransaction.cpp src/timedata.cpp src/qt/overviewpage.cpp src/qt/csvmodelwriter.cpp src/crypter.cpp src/qt/sendcoinsentry.cpp src/qt/qvalidatedlineedit.cpp src/qt/graphicscoinunits.cpp src/qt/qvaluecombobox.cpp src/qt/askpassphrasedialog.cpp src/protocol.cpp src/qt/notificator.cpp src/qt/paymentserver.cpp src/qt/rpcconsole.cpp src/noui.cpp src/kernel.cpp src/scrypt-arm.S src/scrypt-x86.S src/scrypt-x86_64.S src/scrypt.cpp src/pbkdf2.cpp src/qt/qrcodedialog.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents src/qt/forms/coincontroldialog.ui src/qt/forms/sendcoinsdialog.ui src/qt/forms/addressbookpage.ui src/qt/forms/blockbrowser.ui src/qt/forms/signverifymessagedialog.ui src/qt/forms/aboutdialog.ui src/qt/forms/editaddressdialog.ui src/qt/forms/transactiondescdialog.ui src/qt/forms/overviewpage.ui src/qt/forms/sendcoinsentry.ui src/qt/forms/askpassphrasedialog.ui src/qt/forms/rpcconsole.ui src/qt/forms/optionsdialog.ui src/qt/forms/qrcodedialog.ui $(DISTDIR)/
 	$(COPY_FILE) --parents src/qt/locale/era_af_ZA.ts src/qt/locale/era_ar.ts src/qt/locale/era_be_BY.ts src/qt/locale/era_bg.ts src/qt/locale/era_bs.ts src/qt/locale/era_ca.ts src/qt/locale/era_ca@valencia.ts src/qt/locale/era_ca_ES.ts src/qt/locale/era_cs.ts src/qt/locale/era_cy.ts src/qt/locale/era_da.ts src/qt/locale/era_de.ts src/qt/locale/era_el_GR.ts src/qt/locale/era_en.ts src/qt/locale/era_eo.ts src/qt/locale/era_es.ts src/qt/locale/era_es_AR.ts src/qt/locale/era_es_CL.ts src/qt/locale/era_es_DO.ts src/qt/locale/era_es_MX.ts src/qt/locale/era_es_UY.ts src/qt/locale/era_et.ts src/qt/locale/era_eu_ES.ts src/qt/locale/era_fa.ts src/qt/locale/era_fa_IR.ts src/qt/locale/era_fi.ts src/qt/locale/era_fr.ts src/qt/locale/era_fr_CA.ts src/qt/locale/era_gl.ts src/qt/locale/era_he.ts src/qt/locale/era_hi_IN.ts src/qt/locale/era_hr.ts src/qt/locale/era_hu.ts src/qt/locale/era_id_ID.ts src/qt/locale/era_it.ts src/qt/locale/era_ja.ts src/qt/locale/era_ka.ts src/qt/locale/era_kk_KZ.ts src/qt/locale/era_ko_KR.ts src/qt/locale/era_ky.ts src/qt/locale/era_la.ts src/qt/locale/era_lt.ts src/qt/locale/era_lv_LV.ts src/qt/locale/era_ms_MY.ts src/qt/locale/era_nb.ts src/qt/locale/era_nl.ts src/qt/locale/era_pam.ts src/qt/locale/era_pl.ts src/qt/locale/era_pt_BR.ts src/qt/locale/era_pt_PT.ts src/qt/locale/era_ro_RO.ts src/qt/locale/era_ru.ts src/qt/locale/era_sah.ts src/qt/locale/era_sk.ts src/qt/locale/era_sl_SI.ts src/qt/locale/era_sq.ts src/qt/locale/era_sr.ts src/qt/locale/era_sv.ts src/qt/locale/era_th_TH.ts src/qt/locale/era_tr.ts src/qt/locale/era_uk.ts src/qt/locale/era_ur_PK.ts src/qt/locale/era_vi.ts src/qt/locale/era_vi_VN.ts src/qt/locale/era_zh_CN.ts src/qt/locale/era_zh_TW.ts $(DISTDIR)/
 
@@ -1018,10 +1018,10 @@ src/qt/locale/era_zh_CN.qm: src/qt/locale/era_zh_CN.ts
 src/qt/locale/era_zh_TW.qm: src/qt/locale/era_zh_TW.ts
 	/usr/lib/i386-linux-gnu/qt5/bin/lrelease src/qt/locale/era_zh_TW.ts -qm src/qt/locale/era_zh_TW.qm
 
-compiler_rcc_make_all: qrc_era.cpp
+compiler_rcc_make_all: qrc_graphicscoin
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_era.cpp
-qrc_era.cpp: src/qt/graphicscoin.qrc \
+	-$(DEL_FILE) qrc_graphicscoin
+qrc_graphicscoin: src/qt/graphicscoin.qrc \
 		src/qt/res/movies/update_spinner_black.mng \
 		src/qt/res/movies/update_spinner.mng \
 		src/qt/res/images/header.png \
@@ -1145,13 +1145,13 @@ qrc_era.cpp: src/qt/graphicscoin.qrc \
 		src/qt/res/icons/black/tx_output.png \
 		src/qt/res/icons/black/staking_on.png \
 		src/qt/res/icons/black/staking_off.png
-	/usr/lib/i386-linux-gnu/qt5/bin/rcc -name graphicscoin src/qt/graphicscoin.qrc -o qrc_era.cpp
+	/usr/lib/i386-linux-gnu/qt5/bin/rcc -name graphicscoin src/qt/graphicscoin.qrc -o qrc_graphicscoin
 
-compiler_moc_header_make_all: build/moc_eragui.cpp build/moc_transactiontablemodel.cpp build/moc_addresstablemodel.cpp build/moc_optionsdialog.cpp build/moc_coincontroldialog.cpp build/moc_coincontroltreewidget.cpp build/moc_sendcoinsdialog.cpp build/moc_addressbookpage.cpp build/moc_blockbrowser.cpp build/moc_signverifymessagedialog.cpp build/moc_aboutdialog.cpp build/moc_editaddressdialog.cpp build/moc_eraaddressvalidator.cpp build/moc_clientmodel.cpp build/moc_guiutil.cpp build/moc_optionsmodel.cpp build/moc_monitoreddatamapper.cpp build/moc_trafficgraphwidget.cpp build/moc_transactiondesc.cpp build/moc_transactiondescdialog.cpp build/moc_eraamountfield.cpp build/moc_transactionfilterproxy.cpp build/moc_transactionview.cpp build/moc_walletmodel.cpp build/moc_overviewpage.cpp build/moc_csvmodelwriter.cpp build/moc_sendcoinsentry.cpp build/moc_qvalidatedlineedit.cpp build/moc_eraunits.cpp build/moc_qvaluecombobox.cpp build/moc_askpassphrasedialog.cpp build/moc_notificator.cpp build/moc_paymentserver.cpp build/moc_rpcconsole.cpp build/moc_qrcodedialog.cpp
+compiler_moc_header_make_all: build/moc_graphicscoingui.cpp build/moc_transactiontablemodel.cpp build/moc_addresstablemodel.cpp build/moc_optionsdialog.cpp build/moc_coincontroldialog.cpp build/moc_coincontroltreewidget.cpp build/moc_sendcoinsdialog.cpp build/moc_addressbookpage.cpp build/moc_blockbrowser.cpp build/moc_signverifymessagedialog.cpp build/moc_aboutdialog.cpp build/moc_editaddressdialog.cpp build/moc_graphicscoinaddressvalidator.cpp build/moc_clientmodel.cpp build/moc_guiutil.cpp build/moc_optionsmodel.cpp build/moc_monitoreddatamapper.cpp build/moc_trafficgraphwidget.cpp build/moc_transactiondesc.cpp build/moc_transactiondescdialog.cpp build/moc_graphicscoinamountfield.cpp build/moc_transactionfilterproxy.cpp build/moc_transactionview.cpp build/moc_walletmodel.cpp build/moc_overviewpage.cpp build/moc_csvmodelwriter.cpp build/moc_sendcoinsentry.cpp build/moc_qvalidatedlineedit.cpp build/moc_graphicscoinunits.cpp build/moc_qvaluecombobox.cpp build/moc_askpassphrasedialog.cpp build/moc_notificator.cpp build/moc_paymentserver.cpp build/moc_rpcconsole.cpp build/moc_qrcodedialog.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) build/moc_eragui.cpp build/moc_transactiontablemodel.cpp build/moc_addresstablemodel.cpp build/moc_optionsdialog.cpp build/moc_coincontroldialog.cpp build/moc_coincontroltreewidget.cpp build/moc_sendcoinsdialog.cpp build/moc_addressbookpage.cpp build/moc_blockbrowser.cpp build/moc_signverifymessagedialog.cpp build/moc_aboutdialog.cpp build/moc_editaddressdialog.cpp build/moc_eraaddressvalidator.cpp build/moc_clientmodel.cpp build/moc_guiutil.cpp build/moc_optionsmodel.cpp build/moc_monitoreddatamapper.cpp build/moc_trafficgraphwidget.cpp build/moc_transactiondesc.cpp build/moc_transactiondescdialog.cpp build/moc_eraamountfield.cpp build/moc_transactionfilterproxy.cpp build/moc_transactionview.cpp build/moc_walletmodel.cpp build/moc_overviewpage.cpp build/moc_csvmodelwriter.cpp build/moc_sendcoinsentry.cpp build/moc_qvalidatedlineedit.cpp build/moc_eraunits.cpp build/moc_qvaluecombobox.cpp build/moc_askpassphrasedialog.cpp build/moc_notificator.cpp build/moc_paymentserver.cpp build/moc_rpcconsole.cpp build/moc_qrcodedialog.cpp
-build/moc_eragui.cpp: src/qt/eragui.h
-	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/eragui.h -o build/moc_eragui.cpp
+	-$(DEL_FILE) build/moc_graphicscoingui.cpp build/moc_transactiontablemodel.cpp build/moc_addresstablemodel.cpp build/moc_optionsdialog.cpp build/moc_coincontroldialog.cpp build/moc_coincontroltreewidget.cpp build/moc_sendcoinsdialog.cpp build/moc_addressbookpage.cpp build/moc_blockbrowser.cpp build/moc_signverifymessagedialog.cpp build/moc_aboutdialog.cpp build/moc_editaddressdialog.cpp build/moc_graphicscoinaddressvalidator.cpp build/moc_clientmodel.cpp build/moc_guiutil.cpp build/moc_optionsmodel.cpp build/moc_monitoreddatamapper.cpp build/moc_trafficgraphwidget.cpp build/moc_transactiondesc.cpp build/moc_transactiondescdialog.cpp build/moc_graphicscoinamountfield.cpp build/moc_transactionfilterproxy.cpp build/moc_transactionview.cpp build/moc_walletmodel.cpp build/moc_overviewpage.cpp build/moc_csvmodelwriter.cpp build/moc_sendcoinsentry.cpp build/moc_qvalidatedlineedit.cpp build/moc_graphicscoinunits.cpp build/moc_qvaluecombobox.cpp build/moc_askpassphrasedialog.cpp build/moc_notificator.cpp build/moc_paymentserver.cpp build/moc_rpcconsole.cpp build/moc_qrcodedialog.cpp
+build/moc_graphicscoingui.cpp: src/qt/graphicscoingui.h
+	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/graphicscoingui.h -o build/moc_graphicscoingui.cpp
 
 build/moc_transactiontablemodel.cpp: src/qt/transactiontablemodel.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/transactiontablemodel.h -o build/moc_transactiontablemodel.cpp
@@ -1231,8 +1231,8 @@ build/moc_aboutdialog.cpp: src/qt/aboutdialog.h
 build/moc_editaddressdialog.cpp: src/qt/editaddressdialog.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/editaddressdialog.h -o build/moc_editaddressdialog.cpp
 
-build/moc_eraaddressvalidator.cpp: src/qt/eraaddressvalidator.h
-	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/eraaddressvalidator.h -o build/moc_eraaddressvalidator.cpp
+build/moc_graphicscoinaddressvalidator.cpp: src/qt/graphicscoinaddressvalidator.h
+	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/graphicscoinaddressvalidator.h -o build/moc_graphicscoinaddressvalidator.cpp
 
 build/moc_clientmodel.cpp: src/qt/clientmodel.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/clientmodel.h -o build/moc_clientmodel.cpp
@@ -1255,8 +1255,8 @@ build/moc_transactiondesc.cpp: src/qt/transactiondesc.h
 build/moc_transactiondescdialog.cpp: src/qt/transactiondescdialog.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/transactiondescdialog.h -o build/moc_transactiondescdialog.cpp
 
-build/moc_eraamountfield.cpp: src/qt/eraamountfield.h
-	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/eraamountfield.h -o build/moc_eraamountfield.cpp
+build/moc_graphicscoinamountfield.cpp: src/qt/graphicscoinamountfield.h
+	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/graphicscoinamountfield.h -o build/moc_graphicscoinamountfield.cpp
 
 build/moc_transactionfilterproxy.cpp: src/qt/transactionfilterproxy.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/transactionfilterproxy.h -o build/moc_transactionfilterproxy.cpp
@@ -1280,8 +1280,8 @@ build/moc_sendcoinsentry.cpp: src/qt/sendcoinsentry.h
 build/moc_qvalidatedlineedit.cpp: src/qt/qvalidatedlineedit.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/qvalidatedlineedit.h -o build/moc_qvalidatedlineedit.cpp
 
-build/moc_eraunits.cpp: src/qt/eraunits.h
-	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/eraunits.h -o build/moc_eraunits.cpp
+build/moc_graphicscoinunits.cpp: src/qt/graphicscoinunits.h
+	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/graphicscoinunits.h -o build/moc_graphicscoinunits.cpp
 
 build/moc_qvaluecombobox.cpp: src/qt/qvaluecombobox.h
 	/usr/lib/i386-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/json' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/qt' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/include' -I'/home/htmlgifted/btcstuff/graphicscoin stuff/walletstuff/graphicscoin/src/leveldb/helpers' -I/usr/include/i386-linux-gnu/qt5 -I/usr/include/i386-linux-gnu/qt5/QtWidgets -I/usr/include/i386-linux-gnu/qt5/QtGui -I/usr/include/i386-linux-gnu/qt5/QtNetwork -I/usr/include/i386-linux-gnu/qt5/QtDBus -I/usr/include/i386-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/i386-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/i686-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/i686-linux-gnu/5/include-fixed -I/usr/include/i386-linux-gnu -I/usr/include src/qt/qvaluecombobox.h -o build/moc_qvaluecombobox.cpp
@@ -1309,7 +1309,7 @@ build/overviewpage.moc: src/qt/overviewpage.h \
 		src/qt/clientmodel.h \
 		src/qt/walletmodel.h \
 		src/allocators.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/optionsmodel.h \
 		src/qt/transactiontablemodel.h \
 		src/qt/transactionfilterproxy.h \
@@ -1369,7 +1369,7 @@ build/ui_overviewpage.h: src/qt/forms/overviewpage.ui
 
 build/ui_sendcoinsentry.h: src/qt/forms/sendcoinsentry.ui \
 		src/qt/qvalidatedlineedit.h \
-		src/qt/eraamountfield.h
+		src/qt/graphicscoinamountfield.h
 	/usr/lib/i386-linux-gnu/qt5/bin/uic src/qt/forms/sendcoinsentry.ui -o build/ui_sendcoinsentry.h
 
 build/ui_askpassphrasedialog.h: src/qt/forms/askpassphrasedialog.ui
@@ -1380,13 +1380,13 @@ build/ui_rpcconsole.h: src/qt/forms/rpcconsole.ui \
 	/usr/lib/i386-linux-gnu/qt5/bin/uic src/qt/forms/rpcconsole.ui -o build/ui_rpcconsole.h
 
 build/ui_optionsdialog.h: src/qt/forms/optionsdialog.ui \
-		src/qt/eraamountfield.h \
+		src/qt/graphicscoinamountfield.h \
 		src/qt/qvaluecombobox.h \
 		src/qt/qvalidatedlineedit.h
 	/usr/lib/i386-linux-gnu/qt5/bin/uic src/qt/forms/optionsdialog.ui -o build/ui_optionsdialog.h
 
 build/ui_qrcodedialog.h: src/qt/forms/qrcodedialog.ui \
-		src/qt/eraamountfield.h
+		src/qt/graphicscoinamountfield.h
 	/usr/lib/i386-linux-gnu/qt5/bin/uic src/qt/forms/qrcodedialog.ui -o build/ui_qrcodedialog.h
 
 compiler_yacc_decl_make_all:
@@ -1532,7 +1532,7 @@ build/sha2big.o: src/sha2big.c src/sph_sha2.h \
 		src/md_helper.c
 	$(CC) -c $(CFLAGS) $(INCPATH) -o build/sha2big.o src/sha2big.c
 
-build/graphicscoin.o: src/qt/graphicscoin.cpp src/qt/eragui.h \
+build/graphicscoin.o: src/qt/graphicscoin.cpp src/qt/graphicscoingui.h \
 		src/qt/clientmodel.h \
 		src/qt/walletmodel.h \
 		src/allocators.h \
@@ -1591,7 +1591,7 @@ build/graphicscoin.o: src/qt/graphicscoin.cpp src/qt/eragui.h \
 		src/qt/paymentserver.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/graphicscoin.o src/qt/graphicscoin.cpp
 
-build/eragui.o: src/qt/eragui.cpp src/qt/eragui.h \
+build/eragui.o: src/qt/graphicscoingui.cpp src/qt/graphicscoingui.h \
 		src/qt/transactiontablemodel.h \
 		src/qt/addressbookpage.h \
 		src/qt/sendcoinsdialog.h \
@@ -1607,7 +1607,7 @@ build/eragui.o: src/qt/eragui.cpp src/qt/eragui.h \
 		src/qt/addresstablemodel.h \
 		src/qt/transactionview.h \
 		src/qt/overviewpage.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/guiconstants.h \
 		src/qt/askpassphrasedialog.h \
 		src/qt/notificator.h \
@@ -1662,7 +1662,7 @@ build/eragui.o: src/qt/eragui.cpp src/qt/eragui.h \
 		src/sph_haval.h \
 		src/ui_interface.h \
 		src/init.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/eragui.o src/qt/eragui.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/eragui.o src/qt/graphicscoingui.cpp
 
 build/transactiontablemodel.o: src/qt/transactiontablemodel.cpp src/qt/transactiontablemodel.h \
 		src/qt/guiutil.h \
@@ -1674,7 +1674,7 @@ build/transactiontablemodel.o: src/qt/transactiontablemodel.cpp src/qt/transacti
 		src/allocators.h \
 		src/qt/optionsmodel.h \
 		src/qt/addresstablemodel.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/wallet.h \
 		src/walletdb.h \
 		src/db.h \
@@ -1781,7 +1781,7 @@ build/addresstablemodel.o: src/qt/addresstablemodel.cpp src/qt/addresstablemodel
 
 build/optionsdialog.o: src/qt/optionsdialog.cpp src/qt/optionsdialog.h \
 		build/ui_optionsdialog.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/monitoreddatamapper.h \
 		src/netbase.h \
 		src/serialize.h \
@@ -1798,7 +1798,7 @@ build/sendcoinsdialog.o: src/qt/sendcoinsdialog.cpp src/qt/sendcoinsdialog.h \
 		src/allocators.h \
 		src/qt/addresstablemodel.h \
 		src/qt/addressbookpage.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/optionsmodel.h \
 		src/qt/sendcoinsentry.h \
 		src/qt/guiutil.h \
@@ -1876,7 +1876,7 @@ build/coincontroldialog.o: src/qt/coincontroldialog.cpp src/qt/coincontroldialog
 		src/sph_haval.h \
 		src/ui_interface.h \
 		src/base58.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/walletmodel.h \
 		src/qt/addresstablemodel.h \
 		src/qt/optionsmodel.h \
@@ -1891,7 +1891,7 @@ build/addressbookpage.o: src/qt/addressbookpage.cpp src/qt/addressbookpage.h \
 		build/ui_addressbookpage.h \
 		src/qt/addresstablemodel.h \
 		src/qt/optionsmodel.h \
-		src/qt/eragui.h \
+		src/qt/graphicscoingui.h \
 		src/qt/editaddressdialog.h \
 		src/qt/csvmodelwriter.h \
 		src/qt/guiutil.h \
@@ -2028,8 +2028,8 @@ build/editaddressdialog.o: src/qt/editaddressdialog.cpp src/qt/editaddressdialog
 		src/qt/guiutil.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/editaddressdialog.o src/qt/editaddressdialog.cpp
 
-build/eraaddressvalidator.o: src/qt/eraaddressvalidator.cpp src/qt/eraaddressvalidator.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/eraaddressvalidator.o src/qt/eraaddressvalidator.cpp
+build/eraaddressvalidator.o: src/qt/graphicscoinaddressvalidator.cpp src/qt/graphicscoinaddressvalidator.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/eraaddressvalidator.o src/qt/graphicscoinaddressvalidator.cpp
 
 build/chainparams.o: src/chainparams.cpp src/chainparams.h \
 		src/bignum.h \
@@ -2684,10 +2684,10 @@ build/clientmodel.o: src/qt/clientmodel.cpp src/qt/clientmodel.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/clientmodel.o src/qt/clientmodel.cpp
 
 build/guiutil.o: src/qt/guiutil.cpp src/qt/guiutil.h \
-		src/qt/eraaddressvalidator.h \
+		src/qt/graphicscoinaddressvalidator.h \
 		src/qt/walletmodel.h \
 		src/allocators.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/util.h \
 		src/serialize.h \
 		src/version.h \
@@ -2793,7 +2793,7 @@ build/transactionrecord.o: src/qt/transactionrecord.cpp src/qt/transactionrecord
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/transactionrecord.o src/qt/transactionrecord.cpp
 
 build/optionsmodel.o: src/qt/optionsmodel.cpp src/qt/optionsmodel.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/init.h \
 		src/wallet.h \
 		src/walletdb.h \
@@ -2855,7 +2855,7 @@ build/trafficgraphwidget.o: src/qt/trafficgraphwidget.cpp src/qt/trafficgraphwid
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/trafficgraphwidget.o src/qt/trafficgraphwidget.cpp
 
 build/transactiondesc.o: src/qt/transactiondesc.cpp src/qt/transactiondesc.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/guiutil.h \
 		src/base58.h \
 		src/chainparams.h \
@@ -2924,14 +2924,14 @@ build/transactiondescdialog.o: src/qt/transactiondescdialog.cpp src/qt/transacti
 		src/qt/transactiontablemodel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/transactiondescdialog.o src/qt/transactiondescdialog.cpp
 
-build/erastrings.o: src/qt/erastrings.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/erastrings.o src/qt/erastrings.cpp
+build/erastrings.o: src/qt/graphicscoinstrings.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/erastrings.o src/qt/graphicscoinstrings.cpp
 
-build/eraamountfield.o: src/qt/eraamountfield.cpp src/qt/eraamountfield.h \
+build/eraamountfield.o: src/qt/graphicscoinamountfield.cpp src/qt/graphicscoinamountfield.h \
 		src/qt/qvaluecombobox.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/guiconstants.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/eraamountfield.o src/qt/eraamountfield.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/eraamountfield.o src/qt/graphicscoinamountfield.cpp
 
 build/wallet.o: src/wallet.cpp src/wallet.h \
 		src/walletdb.h \
@@ -3025,7 +3025,7 @@ build/transactionview.o: src/qt/transactionview.cpp src/qt/transactionview.h \
 		src/allocators.h \
 		src/qt/addresstablemodel.h \
 		src/qt/transactiontablemodel.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/csvmodelwriter.h \
 		src/qt/transactiondescdialog.h \
 		src/qt/editaddressdialog.h \
@@ -3629,7 +3629,7 @@ build/overviewpage.o: src/qt/overviewpage.cpp src/qt/overviewpage.h \
 		src/qt/clientmodel.h \
 		src/qt/walletmodel.h \
 		src/allocators.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/optionsmodel.h \
 		src/qt/transactiontablemodel.h \
 		src/qt/transactionfilterproxy.h \
@@ -3670,7 +3670,7 @@ build/crypter.o: src/crypter.cpp src/crypter.h \
 build/sendcoinsentry.o: src/qt/sendcoinsentry.cpp src/qt/sendcoinsentry.h \
 		build/ui_sendcoinsentry.h \
 		src/qt/guiutil.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/addressbookpage.h \
 		src/qt/walletmodel.h \
 		src/allocators.h \
@@ -3682,8 +3682,8 @@ build/qvalidatedlineedit.o: src/qt/qvalidatedlineedit.cpp src/qt/qvalidatedlinee
 		src/qt/guiconstants.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/qvalidatedlineedit.o src/qt/qvalidatedlineedit.cpp
 
-build/eraunits.o: src/qt/eraunits.cpp src/qt/eraunits.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/eraunits.o src/qt/eraunits.cpp
+build/eraunits.o: src/qt/graphicscoinunits.cpp src/qt/graphicscoinunits.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/eraunits.o src/qt/graphicscoinunits.cpp
 
 build/qvaluecombobox.o: src/qt/qvaluecombobox.cpp src/qt/qvaluecombobox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/qvaluecombobox.o src/qt/qvaluecombobox.cpp
@@ -3884,17 +3884,17 @@ build/pbkdf2.o: src/pbkdf2.cpp src/pbkdf2.h
 
 build/qrcodedialog.o: src/qt/qrcodedialog.cpp src/qt/qrcodedialog.h \
 		build/ui_qrcodedialog.h \
-		src/qt/eraunits.h \
+		src/qt/graphicscoinunits.h \
 		src/qt/guiconstants.h \
 		src/qt/guiutil.h \
 		src/qt/optionsmodel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/qrcodedialog.o src/qt/qrcodedialog.cpp
 
-build/qrc_era.o: qrc_era.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/qrc_era.o qrc_era.cpp
+build/qrc_era.o: qrc_graphicscoin 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/qrc_era.o qrc_graphicscoin
 
-build/moc_eragui.o: build/moc_eragui.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_eragui.o build/moc_eragui.cpp
+build/moc_eragui.o: build/moc_graphicscoingui.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_eragui.o build/moc_graphicscoingui.cpp
 
 build/moc_transactiontablemodel.o: build/moc_transactiontablemodel.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_transactiontablemodel.o build/moc_transactiontablemodel.cpp
@@ -3929,8 +3929,8 @@ build/moc_aboutdialog.o: build/moc_aboutdialog.cpp
 build/moc_editaddressdialog.o: build/moc_editaddressdialog.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_editaddressdialog.o build/moc_editaddressdialog.cpp
 
-build/moc_eraaddressvalidator.o: build/moc_eraaddressvalidator.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_eraaddressvalidator.o build/moc_eraaddressvalidator.cpp
+build/moc_eraaddressvalidator.o: build/moc_graphicscoinaddressvalidator.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_eraaddressvalidator.o build/moc_graphicscoinaddressvalidator.cpp
 
 build/moc_clientmodel.o: build/moc_clientmodel.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_clientmodel.o build/moc_clientmodel.cpp
@@ -3953,8 +3953,8 @@ build/moc_transactiondesc.o: build/moc_transactiondesc.cpp
 build/moc_transactiondescdialog.o: build/moc_transactiondescdialog.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_transactiondescdialog.o build/moc_transactiondescdialog.cpp
 
-build/moc_eraamountfield.o: build/moc_eraamountfield.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_eraamountfield.o build/moc_eraamountfield.cpp
+build/moc_eraamountfield.o: build/moc_graphicscoinamountfield.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_eraamountfield.o build/moc_graphicscoinamountfield.cpp
 
 build/moc_transactionfilterproxy.o: build/moc_transactionfilterproxy.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_transactionfilterproxy.o build/moc_transactionfilterproxy.cpp
@@ -3977,8 +3977,8 @@ build/moc_sendcoinsentry.o: build/moc_sendcoinsentry.cpp
 build/moc_qvalidatedlineedit.o: build/moc_qvalidatedlineedit.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_qvalidatedlineedit.o build/moc_qvalidatedlineedit.cpp
 
-build/moc_eraunits.o: build/moc_eraunits.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_eraunits.o build/moc_eraunits.cpp
+build/moc_eraunits.o: build/moc_graphicscoinunits.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_eraunits.o build/moc_graphicscoinunits.cpp
 
 build/moc_qvaluecombobox.o: build/moc_qvaluecombobox.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_qvaluecombobox.o build/moc_qvaluecombobox.cpp

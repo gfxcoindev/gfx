@@ -7,7 +7,7 @@
 
 #include <QApplication>
 
-#include "eragui.h"
+#include "graphicscoingui.h"
 
 #include "transactiontablemodel.h"
 #include "addressbookpage.h"
@@ -24,7 +24,7 @@
 #include "transactionview.h"
 #include "overviewpage.h"
 #include "blockbrowser.h"
-#include "eraunits.h"
+#include "graphicscoinunits.h"
 #include "guiconstants.h"
 #include "askpassphrasedialog.h"
 #include "notificator.h"

@@ -1,7 +1,7 @@
-#include "eraamountfield.h"
+#include "graphicscoinamountfield.h"
 
 #include "qvaluecombobox.h"
-#include "eraunits.h"
+#include "graphicscoinunits.h"
 #include "guiconstants.h"
 
 #include <QHBoxLayout>

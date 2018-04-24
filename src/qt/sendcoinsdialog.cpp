@@ -5,7 +5,7 @@
 #include "addresstablemodel.h"
 #include "addressbookpage.h"
 
-#include "eraunits.h"
+#include "graphicscoinunits.h"
 #include "addressbookpage.h"
 #include "optionsmodel.h"
 #include "sendcoinsentry.h"

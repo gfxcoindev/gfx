@@ -311,7 +311,7 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
 <context>
     <name>EraGUI</name>
     <message>
-        <location filename="../eragui.cpp" line="+297"/>
+        <location filename="../graphicscoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
         <translation>Podpísať &amp;správu...</translation>
     </message>
@@ -2582,7 +2582,7 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
 <context>
     <name>graphicscoin-core</name>
     <message>
-        <location filename="../erastrings.cpp" line="+8"/>
+        <location filename="../graphicscoinstrings.cpp" line="+8"/>
         <source>GraphicsCoin version</source>
         <translation>Verzia GraphicsCoin</translation>
     </message>

@@ -306,7 +306,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>EraGUI</name>
     <message>
-        <location filename="../eragui.cpp" line="+297"/>
+        <location filename="../graphicscoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
         <translation>Signar &amp;missatge...</translation>
     </message>
@@ -2574,7 +2574,7 @@ En aquest cas es requereix una comisió d&apos;almenys 2%.</translation>
 <context>
     <name>graphicscoin-core</name>
     <message>
-        <location filename="../erastrings.cpp" line="+8"/>
+        <location filename="../graphicscoinstrings.cpp" line="+8"/>
         <source>GraphicsCoin version</source>
         <translation>versió GraphicsCoin</translation>
     </message>

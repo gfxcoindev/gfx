@@ -311,7 +311,7 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
 <context>
     <name>EraGUI</name>
     <message>
-        <location filename="../eragui.cpp" line="+297"/>
+        <location filename="../graphicscoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Mesaj imzala...</translation>
     </message>
@@ -2583,7 +2583,7 @@ Adres: %4
 <context>
     <name>graphicscoin-core</name>
     <message>
-        <location filename="../erastrings.cpp" line="+8"/>
+        <location filename="../graphicscoinstrings.cpp" line="+8"/>
         <source>GraphicsCoin version</source>
         <translation>GraphicsCoin versiyonu</translation>
     </message>

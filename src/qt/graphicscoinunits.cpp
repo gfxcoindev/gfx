@@ -1,4 +1,4 @@
-#include "eraunits.h"
+#include "graphicscoinunits.h"
 
 #include <QStringList>
 

@@ -1,6 +1,6 @@
 #include "optionsmodel.h"
 
-#include "eraunits.h"
+#include "graphicscoinunits.h"
 #include "init.h"
 #include "wallet.h"
 #include "walletdb.h"

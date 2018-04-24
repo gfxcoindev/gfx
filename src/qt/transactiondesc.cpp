@@ -1,6 +1,6 @@
 #include "transactiondesc.h"
 
-#include "eraunits.h"
+#include "graphicscoinunits.h"
 #include "guiutil.h"
 
 #include "base58.h"

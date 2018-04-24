@@ -2,9 +2,9 @@
 
 #include "guiutil.h"
 
-#include "eraaddressvalidator.h"
+#include "graphicscoinaddressvalidator.h"
 #include "walletmodel.h"
-#include "eraunits.h"
+#include "graphicscoinunits.h"
 
 #include "util.h"
 #include "init.h"

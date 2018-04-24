@@ -148,7 +148,7 @@
   <customwidget>
    <class>EraAmountField</class>
    <extends>QLineEdit</extends>
-   <header>eraamountfield.h</header>
+   <header>graphicscoinamountfield.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

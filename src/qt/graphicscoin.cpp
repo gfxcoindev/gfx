@@ -4,7 +4,7 @@
 
 #include <QApplication>
 
-#include "eragui.h"
+#include "graphicscoingui.h"
 #include "clientmodel.h"
 #include "walletmodel.h"
 #include "optionsmodel.h"

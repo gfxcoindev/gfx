@@ -465,7 +465,7 @@
   <customwidget>
    <class>EraAmountField</class>
    <extends>QSpinBox</extends>
-   <header>eraamountfield.h</header>
+   <header>graphicscoinamountfield.h</header>
   </customwidget>
   <customwidget>
    <class>QValueComboBox</class>
